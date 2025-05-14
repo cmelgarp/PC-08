@@ -1,0 +1,158 @@
+using System;
+namespace Actividad1_Semana_18;
+
+public class Notas
+{
+    public string NombreAlumno {get; set;}
+    public int[] NotasAlumnos = new int [10]; 
+
+    public Notas ( int[] notasAlumnosIngresadas, string nombreAlumnoIngresado)
+    {
+        this.NotasAlumnos = notasAlumnosIngresadas;
+        this.NombreAlumno = nombreAlumnoIngresado; 
+    }
+
+    public int PromedioGeneral()
+    {
+        int resultadoNota = 0; 
+        for(int i = 0; i<10; i++)
+        {
+            resultadoNota += NotasAlumnos[i];
+        }
+        resultadoNota /= 10;
+
+        return resultadoNota;
+    }
+
+    public void AlumnosAprobados()
+    {
+        foreach (int i in NotasAlumnos)
+        {
+            if (i >= 65)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+    public void AlumnosDesaprobados()
+    {
+        foreach (int i in NotasAlumnos)
+        {
+            if (i < 65)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+}
+
+class Actividad1_Semana_18
+{
+    
+    static int ValidarNumero(string entradaDeUsuario)
+    {
+         int numero;
+    
+        while(true)
+        {
+            if (int.TryParse(entradaDeUsuario, out numero))
+            {
+                break; 
+            }
+            else
+            {
+                Console.WriteLine("Entrada inválida. Inténtalo de nuevo.");
+                Console.WriteLine("Ingresa nuevamente la nota: ");
+                entradaDeUsuario = Console.ReadLine()!;
+            }
+        } 
+
+        return numero; 
+    }
+    public static void PromedioTotal (){
+        int promedioGeneral = 0; 
+        for (int i = 0; i < 10; i++)
+        {
+            promedioGeneral += s_alumnosIngresados[i].PromedioGeneral();
+        }
+        promedioGeneral /= 10;
+        Console.WriteLine("El promedio total es de: " + promedioGeneral);
+    }
+
+    public static void NotasTotalesAprobadas ()
+    {
+        for (int i = 0; i<10; i++)
+        {
+            Console.WriteLine("\nNombre de alumno:"+ s_alumnosIngresados[i].NombreAlumno);
+            Console.WriteLine("Sus notas aprobadas son:");
+            s_alumnosIngresados[i].AlumnosAprobados();
+            Console.WriteLine("\n");
+        }
+    }
+
+    public static void NotasTotalesDesaprobadas ()
+    {
+        for (int i = 0; i<10; i++)
+        {
+            Console.WriteLine("\nNombre de alumno:"+ s_alumnosIngresados[i].NombreAlumno);
+            Console.WriteLine("Sus notas desaprobadas son:");
+            s_alumnosIngresados[i].AlumnosDesaprobados();
+            Console.WriteLine("\n");
+        }
+    }
+
+    static string[] s_nombreAlumnos1 = new string [10];
+    static int[,] s_notasAlumnos = new int[10,10];
+   
+    static Notas[] s_alumnosIngresados = new Notas[10];
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Bienvenido/a profesoro/a. A continuacion debe de ingresar 10 notas de 10 alumnos.");
+        Console.ReadLine();
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("\nIngresa el nombre del alumno numero " + (i+1) + ": "); 
+            s_nombreAlumnos1[i] = Console.ReadLine()!;
+
+            int [] notasFinales = new int [10];
+           
+            for (int j = 0; j < 10; j++)
+            {
+                Console.WriteLine("Ingresa la nota número " + (j+1) + " de tu almuno: ");
+                s_notasAlumnos[i,j] = ValidarNumero(Console.ReadLine()!);
+                notasFinales[j] = s_notasAlumnos[i,j];
+            }
+            
+            s_alumnosIngresados[i] = new Notas(notasFinales, s_nombreAlumnos1[i]);
+        }
+
+        Console.WriteLine("Ya has ingresado todas las notas de tus 10 alumnos. \nEs momento de elegir!");
+        Console.WriteLine("------MENU-------\n1. Obtener Promedio Total\n2. Obtener notas aprobadas\n3. Obtener notas desaprovadas\n4. Finalizar Programa.");
+        int opcionIngresadas = ValidarNumero(Console.ReadLine()!);
+
+        switch(opcionIngresadas)
+        {
+            case 1: 
+                PromedioTotal();
+            break; 
+
+            case 2: 
+                NotasTotalesAprobadas();
+            break; 
+
+            case 3: 
+                NotasTotalesDesaprobadas();
+            break; 
+
+            case 4: 
+                Console.WriteLine("El programa ha finalizado. Muchas gracias. Lindo día.");
+            break; 
+        }
+       
+
+    }
+
+}
