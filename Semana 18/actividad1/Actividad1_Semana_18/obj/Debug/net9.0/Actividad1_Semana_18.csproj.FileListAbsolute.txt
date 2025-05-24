@@ -1,0 +1,14 @@
+C:\Users\yayam\Desktop\Actividad1_Semana_18\bin\Debug\net9.0\Actividad1_Semana_18.exe
+C:\Users\yayam\Desktop\Actividad1_Semana_18\bin\Debug\net9.0\Actividad1_Semana_18.deps.json
+C:\Users\yayam\Desktop\Actividad1_Semana_18\bin\Debug\net9.0\Actividad1_Semana_18.runtimeconfig.json
+C:\Users\yayam\Desktop\Actividad1_Semana_18\bin\Debug\net9.0\Actividad1_Semana_18.dll
+C:\Users\yayam\Desktop\Actividad1_Semana_18\bin\Debug\net9.0\Actividad1_Semana_18.pdb
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.AssemblyInfoInputs.cache
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.AssemblyInfo.cs
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.csproj.CoreCompileInputs.cache
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.dll
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\refint\Actividad1_Semana_18.dll
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.pdb
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\Actividad1_Semana_18.genruntimeconfig.cache
+C:\Users\yayam\Desktop\Actividad1_Semana_18\obj\Debug\net9.0\ref\Actividad1_Semana_18.dll
